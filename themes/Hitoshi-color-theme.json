@@ -20,6 +20,7 @@
 		red:		#ec5f67
 		darkred:	#be534e
 		magenta:	#d33682
+		oldpink:	#d2999a
 		violet:		#8c6cec
 		velvet:		#bcbcff
 		blue:		#268bd2
@@ -32,9 +33,8 @@
 		sand:		#dbca95
 		brown:		#ab7967
 	*/
-	"colors": {
-		/*** UI COLORS ***/
 
+	"colors": {		/*** UI COLORS ***/
 		// basic
 		"editor.background": "#3a3833", // main background color
 		"editor.foreground": "#dbdbdb", // main text color
@@ -112,7 +112,7 @@
 		"breadcrumbPicker.background": "#35332e",
 
 		// editor
-		"editorHoverWidget.foreground": "#000", // ???? doesn't work
+		"editorHoverWidget.foreground": "#dbdbdb", // e.g. help text mousover function
 		"editorHoverWidget.background": "#24211c", // e.g. scope panel
 		"editorHoverWidget.border": "#424138",
 		"editorIndentGuide.background": "#444444", // when unactive (cursor outside)
@@ -252,8 +252,8 @@
 
 		"sideBarTitle.foreground": "#bbbbbb",
 	},
-	"tokenColors": [
-		/*** SYNTAX COLORS ***/
+	"tokenColors": [	/*** SYNTAX COLORS ***/
+		//#region 	[GENERICS]
 		{
 			"name": "Comment",
 			"scope": [
@@ -327,7 +327,7 @@
 			}
 		},
 		{
-			"name": "Language methods",
+			"name": "Language Methods",
 			"scope": [
 				"variable.language"
 			],
@@ -370,9 +370,11 @@
 				"keyword.operator.comparison",
 				"keyword.operator.assignment",
 				"keyword.operator.arithmetic",
-				"keyword.operator.logcial",
+				"keyword.operator.logical",
 				"punctuation.definition.equals.ini",
-				"keyword.operator.asp"
+				"keyword.operator.asp",
+				"keyword.operator.python",
+				"punctuation.separator.key-value.ini" // = equal sign for .ini
 			],
 			"settings": {
 				"foreground": "#3fedd8"
@@ -391,6 +393,7 @@
 			}
 		},
 		{
+			// works in: Python
 			"name": "Function Name",
 			"scope": [
 				"entity.name.function",
@@ -420,6 +423,7 @@
 			}
 		},
 		{
+			// "if, then, else", "for", "while", "return", …
 			"name": "Flow Control",
 			"scope": [
 				"keyword.control" // .conditional, .flow
@@ -427,15 +431,6 @@
 			"settings": {
 				"foreground": "#8c6cec"
 				//st:: "background": "color(var(back) blend(#fff 95%))"
-			}
-		},
-		{
-			"name": "Library Class",
-			"scope": [
-				"keyword.control" // .conditional, .flow
-			],
-			"settings": {
-				"foreground": "#8c6cec"
 			}
 		},
 		{
@@ -577,7 +572,7 @@
 			}
 		},
 		{
-			"name": "Round + Curly Brackets (),{}",
+			"name": "Round + Curly Brackets (),{} & Commata",
 			"scope": [
 				"meta.brace.round",
 				"meta.brace.curly",
@@ -587,15 +582,32 @@
 				"punctuation.section.group",
 				"punctuation.separator.dictionary",
 				"punctuation.separator.comma.js",
-				"punctuation.separator.arguments.python",
-				"punctuation.separator.parameters.python"
+				// [PYTHON] ↓
+				"punctuation.separator.arguments.python",  // comma
+				"punctuation.separator.parameters.python", // comma
+				"punctuation.parenthesis.begin.python",    // parens () ↓
+				"punctuation.parenthesis.end.python",
+				"meta.function-call.python punctuation.definition.arguments.begin.python",
+				"meta.function-call.python punctuation.definition.arguments.end.python",
+				"meta.function.parameters.python punctuation.definition.parameters.begin.python",
+				"meta.function.parameters.python punctuation.definition.parameters.end.python",
+				"punctuation.separator.colon.python",      // : colon after if, for, class, def, …
+				"meta.function.python punctuation.section.function.begin.python",
+				"meta.class.python punctuation.section.class.begin.python",
+				// [JSON] ↓
+				"punctuation.definition.dictionary.begin.json", // {}
+				"punctuation.definition.dictionary.end.json",
+				"punctuation.definition.array.begin.json",      // []
+				"punctuation.definition.array.end.json",
+				"punctuation.separator.array.json"				// comma
 			],
 			"settings": {
-				"foreground": "#268bd2"
+				"foreground": "#778b91"
 			}
 		},
 		{
 			// not present in ST Hitoshi
+			// special generic tokenizer for links in VSC
 			"name": "URL",
 			"scope": [
 				"*url*",
@@ -606,8 +618,11 @@
 				"fontStyle": "underline"
 			}
 		},
+		//#endregion 	[GENERICS]
 		
-		/********* CSS ******** */
+		//#region 	[LANG SPECIFICS]
+
+		//#region 	[CSS]
 		{
 			// #45ee83, …
 			"name": "[CSS] – Color Values",
@@ -736,8 +751,9 @@
 				"foreground": "#be534e"
 			}
 		},
+		//#endregion 	[CSS]
 		
-		/********* HTML ******** */
+		//#region 	[HTML]
 		// the VSC HTLM-scopes are not as good as the ST ones, so the\
 		//  following looks a bit odd …
 		{
@@ -861,8 +877,9 @@
 				"foreground": "#2aa198"
 			}
 		},
+		//#endregion 	[HTML]
 		
-		/********* PHP ******** */
+		//#region 	[PHP]
 		{
 			"name": "[PHP] – Dollar Sign $",
 			"scope": [
@@ -890,8 +907,9 @@
 				"foreground": "#fac863"
 			}
 		},
+		//#endregion 	[PHP]
 
-		/********* MARKDOWN / MARKUP ******** */
+		//#region 	[MARKDOWN / MARKUP]
 		{
 			"name": "[MARKDOWN] – Heading",
 			"scope": [
@@ -1083,8 +1101,127 @@
 				//::st "background": "var(dark)"
 			}
 		},
+		//#endregion 	[MARKDOWN / MARKUP]
 
-		/********* DIFF ******** */
+		//#region 	[PYTHON]
+		{
+			"name": "[PYTHON] – Import keyword",
+			"scope": [
+				"keyword.control.import.python"
+			],
+			"settings": {
+				"foreground": "#be534e"
+			}
+		},
+		{
+			"name": "[PYTHON] – Class keyword",
+			"scope": [
+				"storage.type.class.python"
+			],
+			"settings": {
+				"foreground": "#d2999a",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "[PYTHON] – Def keyword",
+			"scope": [
+				"storage.type.function.python"
+			],
+			"settings": {
+				"foreground": "#7ae014",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// array; [] brackets
+			"name": "[PYTHON] – Array Brackets []",
+			"scope": [
+				"punctuation.definition.list.begin.python",
+				"punctuation.definition.list.end.python",
+				"meta.item-access.python punctuation.definition.arguments.begin.python",
+				"meta.item-access.python punctuation.definition.arguments.end.python"
+			],
+			"settings": {
+				"foreground": "#268bd2"
+			}
+		},
+		{
+			// Docstring """
+			"name": "[PYTHON] – Docstring",
+			"scope": [
+				"string.quoted.docstring.multi.python"
+			],
+			"settings": {
+				"foreground": "#586e75"
+			}
+		},
+		{
+			// decorator @
+			"name": "[PYTHON] – Decorator @ Sign",
+			"scope": [
+				"punctuation.definition.decorator.python"
+			],
+			"settings": {
+				"foreground": "#958488"
+			}
+		},
+		{
+			// decorator
+			"name": "[PYTHON] – Decorator Name",
+			"scope": [
+				"meta.function.decorator.python support.type.python"
+			],
+			"settings": {
+				"foreground": "#d2999a",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// "self" keyword
+			"name": "[PYTHON] – Keyword self",
+			"scope": [
+				"variable.language.special.self.python",
+				"variable.parameter.function.language.special.self.python"
+			],
+			"settings": {
+				"foreground": "#df6365",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "[PYTHON] – Function Call",
+			"scope": [
+				"meta.function-call.generic.python"
+			],
+			"settings": {
+				"foreground": "#98d4f5"
+			}
+		},
+		{
+			"name": "[PYTHON] – Function Call Argument",
+			"scope": [
+				"meta.function-call.arguments.python"
+			],
+			"settings": {
+				"foreground": "#dbca95"
+			}
+		},
+		//#endregion 	[PYTHON]
+
+		//#region 	[JSON]
+			{
+				"name": "[JSON] – Function Call Argument",
+				"scope": [
+					"meta.function-call.arguments.python"
+				],
+				"settings": {
+					"foreground": "#dbca95"
+				}
+			},
+		//#endregion 	[JSON]
+		
+		//#region 	[DIFF]
 		{
 			"name": "[DIFF] – Header",
 			"scope": [
@@ -1130,12 +1267,9 @@
 			"settings": {
 				"foreground": "#cab15f"
 			}
-		},
+		}
+		//#endregion 	[DIFF]
 
-
-
-
-
-
+		//#endregion 	[LANG SPECIFCS]
 	]
 }
