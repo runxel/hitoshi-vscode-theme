@@ -35,7 +35,7 @@ Heading 2
 
 ### Heading 3
 
-There is some text here `and it has inline code`. We need to escape! \\
+There is some text here `and it has inline code`. We need to escape! → \\
 
 ```python
 import math
