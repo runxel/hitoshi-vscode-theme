@@ -17,8 +17,8 @@
 - A List
 - Yeah. Don't forget list styling.
 
--[ ] something to tick
--[x] already ticked
+- [ ] something to tick
+- [x] already ticked
 
 ---
 
