@@ -1,2 +1,5 @@
 # vendored code which shouldn't count for lang stats
 demo/* linguist-vendored
+
+# convince linguist that JSON can have comments  
+*.json linguist-language=json5
