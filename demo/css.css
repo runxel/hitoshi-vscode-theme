@@ -1,0 +1,30 @@
+/* This is some serious CSS going on */
+
+@font-face {
+  font-family: Arial, Helvetica, sans-serif;
+  src: url(https://example.org);
+}
+
+::selection {
+  color: #444444;
+}
+
+.someClass {
+  font-family: 'Helvetica', serif;
+}
+
+#someID {
+  background: yellow;
+}
+
+main,
+footer > * {
+  margin-top: 20px;
+  border-color: hsla(45, 70, 65, 0.6);
+  -moz-animation-duration: 0s;
+}
+
+body > li:hover {
+  padding: 1.5rem;
+  transition-property: all;
+}
