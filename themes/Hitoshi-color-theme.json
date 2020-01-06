@@ -572,7 +572,7 @@
 			}
 		},
 		{
-			"name": "Round + Curly Brackets (),{} & Commata",
+			"name": "Round + Curly Brackets (),{}; Commata; Semicolons",
 			"scope": [
 				"meta.brace.round",
 				"meta.brace.curly",
@@ -582,6 +582,10 @@
 				"punctuation.section.group",
 				"punctuation.separator.dictionary",
 				"punctuation.separator.comma.js",
+				// [CSS] ↓
+				"punctuation.separator.key-value.css", // colon :
+				"punctuation.separator.list.comma.css", // comma ,
+				"punctuation.terminator.rule.css", // line terminator semicolon ;
 				// [PYTHON] ↓
 				"punctuation.separator.arguments.python",  // comma
 				"punctuation.separator.parameters.python", // comma
