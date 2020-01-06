@@ -1,0 +1,2 @@
+# vendored code which shouldn't count for lang stats
+demo/* linguist-vendored
