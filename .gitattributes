@@ -2,4 +2,4 @@
 demo/* linguist-vendored
 
 # convince linguist that JSON can have comments  
-*.json linguist-language=jsonc
+*.json linguist-language=JSON with Comments
