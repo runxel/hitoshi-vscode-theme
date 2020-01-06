@@ -16,7 +16,7 @@ Some of the [demos](/demo) were taken from the [Night Owl](https://github.com/sd
 ---
 
 ### TODO
-  - [ ] nicer colors for JSON, INI, XML key-value pairs.
+  - [ ] nicer colors for JSON, INI, XML key-value pairs. (should also work with CSS property: value;)
 
   <details>
     <summary>Missing UI colors</summary>
