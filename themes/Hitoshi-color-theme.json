@@ -297,6 +297,8 @@
 			}
 		},
 		{
+			/* constant.character.escape should get it's own styling when there
+			   is finally support for background styling */ 
 			"name": "Escape Characters \\, Numbers, Function Arguments",
 			"scope": [
 				"constant.character.escape",
@@ -1271,8 +1273,121 @@
 			"settings": {
 				"foreground": "#cab15f"
 			}
-		}
+		},
 		//#endregion 	[DIFF]
+
+		//#region 	[GDL]
+		// support for https://github.com/runxel/GDL-vscode
+		{
+			"name": "[GDL] – Support Variables",
+			"scope": [
+				"support.other.variable"
+			],
+			"settings": {
+				"foreground": "#d2999a"
+			}
+		},
+		{
+			"name": "[GDL] – Support Variable Shadow",
+			"scope": [
+				"support.other.variable.shadow.gdl"
+			],
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "[GDL] – Support Type",
+			"scope": [
+				"support.type"
+			],
+			"settings": {
+				"foreground": "#FAC863"
+			}
+		},
+		{
+			// "subroutine":
+			"name": "[GDL] – Subroutines",
+			"scope": [
+				"entity.name.function, punctuation.section.function"
+			],
+			"settings": {
+				"foreground": "#40bdbd",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			// 100:
+			"name": "[GDL] – Jump Labels",
+			"scope": [
+				"variable.function.gdl"
+			],
+			"settings": {
+				"foreground": "#389C9C"
+			}
+		},
+		{
+			"name": "[GDL] – Constant (lang)",
+			"scope": [
+				"variable.function.gdl"
+			],
+			"settings": {
+				"foreground": "#f79e60"
+			}
+		},
+		{
+			// <CHANGEID>, etc. [inside of strings]
+			"name": "[GDL] – Autotext",
+			"scope": [
+				"variable.function.gdl"
+			],
+			"settings": {
+				"foreground": "#93BD50"
+			}
+		},
+		{
+			"name": "[GDL] – Globals",
+			"scope": [
+				"keyword.globals"
+			],
+			"settings": {
+				"foreground": "#39AB73"
+			}
+		},
+		{
+			// open calls
+			"name": "[GDL] – Extern",
+			"scope": [
+				"keyword.extern",
+				"keyword.addon"
+			],
+			"settings": {
+				"foreground": "#AE4977"
+			}
+		},
+		{
+			// mul, add2, …
+			"name": "[GDL] – Transform",
+			"scope": [
+				"keyword.transform"
+			],
+			"settings": {
+				"foreground": "#be534e",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			// hotspot2, …
+			"name": "[GDL] – Hotedits",
+			"scope": [
+				"keyword.v"
+			],
+			"settings": {
+				"foreground": "#FF7979",
+				"fontStyle": "italic"
+			}
+		},
+		//#endregion 	[GDL]
 
 		//#endregion 	[LANG SPECIFCS]
 	]
