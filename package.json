@@ -1,0 +1,22 @@
+{
+    "name": "hitoshi",
+    "displayName": "Hitoshi",
+    "description": "A Visual Studio Code theme with some retro charme to it.",
+    "version": "0.0.1",
+    "publisher": "runxel",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Hitoshi",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Hitoshi-color-theme.json"
+            }
+        ]
+    }
+}
