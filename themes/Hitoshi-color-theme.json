@@ -83,11 +83,18 @@
 
 		// activityBar ("Sidebar")
 		"activityBar.background": "#35332e",
-		"activityBar.border": "#2f2d2950",
+		"activityBar.border": "#2f2d29b7",
 		"activityBar.dropBackground": "#2a2824a6",
 		"activityBar.foreground": "#dbdbdbcc",
 		"activityBarBadge.background": "#ffbb00b9",
 		"activityBarBadge.foreground": "#3a3833",
+
+		// sidebar
+		"sideBar.background": "#35332e",
+		"sideBarTitle.foreground": "#dbdbdb",
+		"sideBarSectionHeader.foreground": "#d38f12c9",
+		"sideBarSectionHeader.background": "#2c2824be",
+		"sideBarSectionHeader.border": "#2c2824", // border at top of section
 
 		// badge
 		"badge.background": "#ffbb00",
@@ -97,12 +104,6 @@
 		"button.background": "#ffbb00",
 		"button.foreground": "#3a3833",
 		"button.hoverBackground": "#ec9200",
-		
-		// gutter
-		"editorGutter.background": "#3a3833",
-		"editorGutter.addedBackground": "#3C9F4A",
-		"editorGutter.deletedBackground": "#A22929",
-		"editorGutter.modifiedBackground": "#26506D",
 
 		// breadcrumb
 		"breadcrumb.foreground": "#dbdbdb75",
@@ -124,8 +125,20 @@
 		"editorBracketMatch.background": "#24211c", //   - " -
 		"editorRuler.foreground": "#686a5b8a", // ruler color
 
+		// suggestion widget
+		"editorSuggestWidget.background": "#24211c",
+		"editorSuggestWidget.foreground": "#dbdbdb",
+		"editorSuggestWidget.highlightForeground": "#2aa198",
+		// "editorSuggestWidget.selectedBackground": => list.activeSelectionBackground
+
 		// search
 		"editor.findMatchBackground": "#f99157",
+
+		// gutter
+		"editorGutter.background": "#3a3833",
+		"editorGutter.addedBackground": "#3C9F4A",
+		"editorGutter.deletedBackground": "#A22929",
+		"editorGutter.modifiedBackground": "#26506D",
 
 		// statusBar
 		"statusBar.background": "#24211c",
@@ -247,10 +260,6 @@
 		"terminal.ansiBrightWhite": "#ffffff",
 		"terminalCursor.background": "#fac863",  //caret
 		"terminalCursor.foreground": "#fac863",
-
-
-
-		"sideBarTitle.foreground": "#bbbbbb",
 	},
 	"tokenColors": [	/*** SYNTAX COLORS ***/
 		//#region 	[GENERICS]
