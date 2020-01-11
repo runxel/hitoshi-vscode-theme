@@ -121,7 +121,7 @@
 		"editorLineNumber.foreground": "#858585",
 		"editorLineNumber.activeForeground": "#b4b4b4",
 		"editorLink.activeForeground": "#858585",
-		"editorBracketMatch.border": "#cad57d",		// matching brackets
+		"editorBracketMatch.border": "#b4be7381",		// matching brackets
 		"editorBracketMatch.background": "#24211c", //   - " -
 		"editorRuler.foreground": "#686a5b8a", // ruler color
 
@@ -132,7 +132,7 @@
 		// "editorSuggestWidget.selectedBackground": => list.activeSelectionBackground
 
 		// search
-		"editor.findMatchBackground": "#f99157",
+		"editor.findMatchBackground": "#388b62",
 
 		// gutter
 		"editorGutter.background": "#3a3833",
@@ -152,8 +152,8 @@
 		"statusBar.noFolderForeground": "#aaa",
 		"statusBarItem.activeBackground": "#997631",
 		"statusBarItem.hoverBackground": "#fac8635d",
-		"statusBarItem.prominentBackground": "#15232d",
-		"statusBarItem.prominentHoverBackground": "#0d3a58",
+		"statusBarItem.prominentBackground": "#103b26",
+		"statusBarItem.prominentHoverBackground": "#155033",
 
 		// tab
 		"tab.activeBackground": "#3a3833",
@@ -208,7 +208,8 @@
 		"list.focusForeground": "#24211c", // also used in quick picker
 		"list.focusBackground": "#b68c39", // dito
 		"list.hoverForeground": "#181613",
-		"list.hoverBackground": "#93a1a1",
+		"list.hoverBackground": "#fac8635d", // lookoutfor concisteny with other "hoverBackground"
+		"list.highlightForeground": "#2aa198", // see "editorSuggestWidget.highlightForeground"
 
 		// Git status colors in File Explorer
 		"gitDecoration.modifiedResourceForeground": "#d6c278",    //modified
@@ -592,11 +593,19 @@
 				"punctuation.definition.parameters",
 				"punctuation.section.group",
 				"punctuation.separator.dictionary",
-				"punctuation.separator.comma.js",
-				// [CSS] ↓
-				"punctuation.separator.key-value.css", // colon :
-				"punctuation.separator.list.comma.css", // comma ,
-				"punctuation.terminator.rule.css", // line terminator semicolon ;
+				"punctuation.separator.comma",
+				"punctuation.terminator.expression", // semicolon
+				"punctuation.definition.arguments.begin.bracket.round", // parens
+				"punctuation.definition.arguments.end.bracket.round",
+				"punctuation.definition.begin.bracket.round",
+				"punctuation.definition.end.bracket.round",
+				"punctuation.definition.array.begin.bracket.round",
+				"punctuation.definition.array.end.bracket.round",
+				"punctuation.definition.begin.bracket.curly", // curly
+				"punctuation.definition.end.bracket.curly",
+				"punctuation.terminator.rule", // css, scss, …: line terminator semicolon ;
+				"punctuation.separator.key-value", // css, scss, …: colon :
+				"punctuation.separator.list.comma", // css, scss, …: comma ,
 				// [PYTHON] ↓
 				"punctuation.separator.arguments.python",  // comma
 				"punctuation.separator.parameters.python", // comma
@@ -647,7 +656,7 @@
 				"invalid.deprecated.color.w3c-non-standard-color-name.scss"
 			],
 			"settings": {
-				"foreground": "#3fedd8"
+				"foreground": "#64bdb2"
 			}
 		},
 		{
