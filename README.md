@@ -1,6 +1,6 @@
 # Hitoshi
 
-Hitoshi is a dark editor theme with a warm retro charme, originally made for [Sublime Text](https://github.com/runxel/hitoshi-sublimetext-theme).
+Hitoshi is a dark [VSCode](https://code.visualstudio.com/) theme with a warm retro charme, originally made for [Sublime Text](https://github.com/runxel/hitoshi-sublimetext-theme).
 
 ---
 
@@ -8,6 +8,10 @@ This is the attempt to translate the ST theme into a usable VS Code theme.
 However this is not so easy since VSC is still not a mature editor and lacks essential features for developers, like variables in themes and the possibility of [background styling](https://github.com/microsoft/vscode/issues/3429).
 While both are "just" a major inconveniences, it's still hurts the dev process a lot.
 **This is still a heavily work in progress theme!**
+
+### Extras
+
+[Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
 ---
 
